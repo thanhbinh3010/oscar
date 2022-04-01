@@ -1,0 +1,13 @@
+{% extends 'oscar/catalogue/partials/product.html' %}
+
+
+{% block product_image %}
+<div class="image_container w-100">
+    {% with image=product.primary_image %}
+        
+        <a href="{{ product.get_absolute_url }}">
+            <img src="{{ thumb.url }}" alt="{{ product.get_title }}" class="img-thumbnail w-auto mx-auto my-0">
+        </a>
+    {% endwith %}
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'oscar/basket/partials/basket_quick.html' %}
+
+{% with image=line.product.primary_image %}           
+                                <a href="{{ line.product.get_absolute_url }}">
+                                    <img src="{{ thumb.url }}" alt="{{ line.product.get_title }}" class="img-thumbnail w-auto mx-auto my-0">
+                                </a>
+                            {% endwith %}
